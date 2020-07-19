@@ -10,9 +10,7 @@ Basically, all you need to do is add __enter__ and __exit__ methods
 to an object if you want it to function as a context manager. Python
 will call these two methods at the appropriate times in the resource
 management cycle.
-
 '''
-
 class ManagedFiles:
     
     def __init__(self,file):
@@ -26,7 +24,7 @@ class ManagedFiles:
         if self.file:
             self.file.close()
 
-#__enter__ get called             
+#__enter__ get called
 with ManagedFiles('hello.txt') as f:
     f.write("Hi Dhirendra whats up ?")
     f.write("Bye for Now")
